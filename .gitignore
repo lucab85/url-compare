@@ -1,0 +1,12 @@
+*.pyc
+__pycache__/
+*.csv
+*.jsonl
+*.log
+.env
+venv/
+.vscode/
+.idea/
+*.egg-info/
+dist/
+build/

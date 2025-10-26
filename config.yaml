@@ -1,0 +1,55 @@
+# URL Comparison Tool Configuration
+# All settings can be overridden via CLI flags
+
+site_a: "https://ansiblepilot.com"
+site_b: "https://ansiblebyexample.com"
+
+discovery: "both"  # Options: sitemap, crawl, both
+crawl_max_depth: 2
+concurrency: 8
+rate_limit_rps: 2
+timeout_ms: 10000
+max_redirects: 5
+follow_robots: true
+retry: 2
+
+output: "urls-compare.csv"
+include_query: false
+include_fragment: false
+
+user_agent: "URLCompareBot/1.0 (+https://github.com/your-org/url-compare)"
+
+# Optional: Override sitemap URLs
+# sitemaps:
+#   - "https://ansiblepilot.com/sitemap.xml"
+#   - "https://ansiblebyexample.com/sitemap.xml"
+
+# File extensions to exclude during crawl
+exclude_extensions:
+  - .pdf
+  - .jpg
+  - .jpeg
+  - .png
+  - .gif
+  - .svg
+  - .webp
+  - .zip
+  - .tar
+  - .gz
+  - .mp4
+  - .mp3
+  - .avi
+  - .mov
+
+# Query parameters to remove (tracking params)
+tracking_params:
+  - utm_source
+  - utm_medium
+  - utm_campaign
+  - utm_term
+  - utm_content
+  - fbclid
+  - gclid
+  - _ga
+  - mc_cid
+  - mc_eid
