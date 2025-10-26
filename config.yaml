@@ -1,12 +1,12 @@
 # URL Comparison Tool Configuration
 # All settings can be overridden via CLI flags
 
-site_a: "https://ansiblepilot.com"
-site_b: "https://ansiblebyexample.com"
+site_a: "https://www.ansiblepilot.com"
+site_b: "https://www.ansiblebyexample.com"
 
 discovery: "both"  # Options: sitemap, crawl, both
-crawl_max_depth: 2
-concurrency: 8
+crawl_max_depth: 5
+concurrency: 16
 rate_limit_rps: 2
 timeout_ms: 10000
 max_redirects: 5
@@ -17,7 +17,7 @@ output: "urls-compare.csv"
 include_query: false
 include_fragment: false
 
-user_agent: "URLCompareBot/1.0 (+https://github.com/your-org/url-compare)"
+user_agent: "URLCompareBot/1.0 (+https://github.com/lucab85/url-compare)"
 
 # Optional: Override sitemap URLs
 # sitemaps:
